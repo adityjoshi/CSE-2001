@@ -18,7 +18,7 @@ int main() {
     cin >> w;
     
     int result = calculateExpression(x, y, z, w);
-    cout << "Result of the expression x + y + z + w is: " << result << endl;
+    cout << "Result : " << result << endl;
 
     return 0;
 }

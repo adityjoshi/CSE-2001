@@ -18,7 +18,6 @@ public:
     }
 };
 
-// Derived class
 class Manager : public Worker {
 private:
     string department;
@@ -27,16 +26,14 @@ public:
     Manager(const string& n, int a, const string& dept) : Worker(n, a), department(dept) {}
 
     void display() {
-        Worker::display(); // Call display function of base class
+        Worker::display(); 
         cout << "Department: " << department << endl;
     }
 };
 
 int main() {
-    // Creating an object of Manager class
     Manager manager("John Doe", 35, "Finance");
 
-    // Displaying manager information
     cout << "Manager's Information:" << endl;
     manager.display();
 

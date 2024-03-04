@@ -11,11 +11,11 @@ int main() {
     Complex num1, num2, result;
 
     // Input for the first complex number
-    cout << "Enter real and imaginary parts of first complex number: ";
+    cout << "Enter real and imaginary parts ";
     cin >> num1.real >> num1.imag;
 
     // Input for the second complex number
-    cout << "Enter real and imaginary parts of second complex number: ";
+    cout << "Enter real and imaginary parts ";
     cin >> num2.real >> num2.imag;
 
     // Perform subtraction

@@ -10,32 +10,52 @@ protected:
     int age;
 
 public:
-    Worker(const string& n, int a) : name(n), age(a) {}
+    Worker() {}
 
-    void display() {
+    void getDetails() {
+        cout << "Enter name: ";
+        cin >> name;
+        cout << "Enter age: ";
+        cin >> age;
+    }
+
+    void showDetails() {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
     }
 };
 
+// Derived class
 class Manager : public Worker {
 private:
     string department;
 
 public:
-    Manager(const string& n, int a, const string& dept) : Worker(n, a), department(dept) {}
+    Manager() {}
 
-    void display() {
-        Worker::display(); 
+    void getDetails() {
+        Worker::getDetails();
+        cout << "Enter department: ";
+        cin >> department;
+    }
+
+    void showDetails() {
+        Worker::showDetails();
         cout << "Department: " << department << endl;
     }
 };
 
 int main() {
-    Manager manager("John Doe", 35, "Finance");
+    // Creating an object of Manager class
+    Manager manager;
 
-    cout << "Manager's Information:" << endl;
-    manager.display();
+    // Taking input for manager details
+    cout << "Enter Manager's details:" << endl;
+    manager.getDetails();
+
+    // Displaying manager information
+    cout << "\nManager's Information:" << endl;
+    manager.showDetails();
 
     return 0;
 }

@@ -8,8 +8,6 @@ public:
         cout << "Vehicle is moving" << endl;
     }
 };
-
-// Derived class Car from Vehicle
 class Car : public Vehicle {
 public:
     void startEngine() {
@@ -17,7 +15,6 @@ public:
     }
 };
 
-// Sub-derived class SportsCar from Car
 class SportsCar : public Car {
 public:
     void accelerate() {
@@ -27,9 +24,9 @@ public:
 
 int main() {
     SportsCar sportsCar;
-    sportsCar.move(); // Call function from base class Vehicle
-    sportsCar.startEngine(); // Call function from derived class Car
-    sportsCar.accelerate(); // Call function from sub-derived class SportsCar
+    sportsCar.move();
+    sportsCar.startEngine();
+    sportsCar.accelerate(); 
     return 0;
 }
 

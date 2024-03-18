@@ -4,7 +4,6 @@ using namespace std;
 
 class Animal {
 public:
-    // Virtual function to make it polymorphic
     virtual void animalSound() {
         cout << "This is the sound of an animal" << endl;
     }
@@ -12,7 +11,6 @@ public:
 
 class Cat : public Animal {
 public:
-    // Redefining animalSound for Cat
     void animalSound() override {
         cout << "Meow" << endl;
     }
@@ -20,7 +18,6 @@ public:
 
 class Dog : public Animal {
 public:
-    // Redefining animalSound for Dog
     void animalSound() override {
         cout << "Woof" << endl;
     }
@@ -32,10 +29,10 @@ int main() {
     Dog dog;
 
     animalPtr = &cat;
-    animalPtr->animalSound(); // Output will be "Meow"
+    animalPtr->animalSound(); 
 
     animalPtr = &dog;
-    animalPtr->animalSound(); // Output will be "Woof"
+    animalPtr->animalSound();
 
     return 0;
 }
